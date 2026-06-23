@@ -15,7 +15,6 @@ interface DetalhesDeputado {
     }
   }
 }
-
 export default function DetailScreen({ route }: any) {
   const { id } = route.params;
   const [detalhes, setDetalhes] = useState<DetalhesDeputado | null>(null);
@@ -47,7 +46,6 @@ export default function DetailScreen({ route }: any) {
       </View>
     );
   }
-
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
@@ -58,7 +56,7 @@ export default function DetailScreen({ route }: any) {
       <View style={styles.infoBox}>
         <Text style={styles.label}>E-mail Institucional:</Text>
         <Text style={styles.value}>{detalhes.ultimoStatus.gabinete.email || 'Não informado'}</Text>
-        
+
         <Text style={styles.label}>Gabinete:</Text>
         <Text style={styles.value}>Prédio {detalhes.ultimoStatus.gabinete.nome}</Text>
 
@@ -76,7 +74,6 @@ export default function DetailScreen({ route }: any) {
     </ScrollView>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -15,7 +15,7 @@ export default function HomeScreen({ navigation }: any) {
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
 
-  // Busca inicial dos deputados
+
   useEffect(() => {
     fetchDeputados();
   }, []);
